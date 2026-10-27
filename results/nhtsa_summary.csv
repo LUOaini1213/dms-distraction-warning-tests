@@ -1,0 +1,4 @@
+﻿variant,n_meet_a,pass_a,n_meet_b,pass_b,n_meet_c,pass_c,task_acceptable,median_teort_s,max_teort_s,median_mean_glance_s,share_with_dms_alert,data_origin
+touch_address,16,False,23,True,2,False,False,13.62,23.61,1.56,1.0,SYNTHETIC
+voice_address,24,True,23,True,24,True,True,2.9,6.83,1.06,0.0,SYNTHETIC
+touch_favourite,23,True,24,True,24,True,True,4.55,7.36,1.14,0.0,SYNTHETIC

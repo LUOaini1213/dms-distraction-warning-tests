@@ -1,0 +1,109 @@
+{
+  "data_origin": "SYNTHETIC",
+  "regulation_cases_proposed": {
+    "通过": 86,
+    "不适用": 10
+  },
+  "regulation_cases_by_config": {
+    "ADDW_MIN": {
+      "通过": 56,
+      "不通过": 30,
+      "不适用": 10
+    },
+    "NAIVE": {
+      "通过": 79,
+      "不适用": 10,
+      "不通过": 7
+    },
+    "PROPOSED": {
+      "通过": 86,
+      "不适用": 10
+    }
+  },
+  "boundary_cases": {
+    "通过": 43
+  },
+  "false_alarm_proposed": {
+    "hours": 4.0,
+    "long_glance_n": 16,
+    "long_glance_detect_rate": 1.0,
+    "long_glance_on_time_addw": 1.0,
+    "long_glance_on_time_encap": 1.0,
+    "long_glance_latency_median_s": 3.4,
+    "long_glance_latency_p95_s": 3.69,
+    "phone_vats_n": 16,
+    "phone_vats_detect_rate": 1.0,
+    "phone_vats_on_time_addw": null,
+    "phone_vats_on_time_encap": 1.0,
+    "phone_vats_latency_median_s": 15.63,
+    "phone_vats_latency_p95_s": 16.67,
+    "false_alarms": 0,
+    "false_alarms_per_h": 0.0,
+    "justified_natural_per_h": 0.25,
+    "visual_pre_alerts_per_h": 23.25,
+    "fss_activations_per_h": 285.2,
+    "fss_time_share": 0.17,
+    "drowsiness_alerts_per_h": 0.0
+  },
+  "nhtsa": [
+    {
+      "variant": "touch_address",
+      "n_meet_a": 16,
+      "pass_a": false,
+      "n_meet_b": 23,
+      "pass_b": true,
+      "n_meet_c": 2,
+      "pass_c": false,
+      "task_acceptable": false,
+      "median_teort_s": 13.62,
+      "max_teort_s": 23.61,
+      "median_mean_glance_s": 1.56,
+      "share_with_dms_alert": 1.0
+    },
+    {
+      "variant": "voice_address",
+      "n_meet_a": 24,
+      "pass_a": true,
+      "n_meet_b": 23,
+      "pass_b": true,
+      "n_meet_c": 24,
+      "pass_c": true,
+      "task_acceptable": true,
+      "median_teort_s": 2.9,
+      "max_teort_s": 6.83,
+      "median_mean_glance_s": 1.06,
+      "share_with_dms_alert": 0.0
+    },
+    {
+      "variant": "touch_favourite",
+      "n_meet_a": 23,
+      "pass_a": true,
+      "n_meet_b": 24,
+      "pass_b": true,
+      "n_meet_c": 24,
+      "pass_c": true,
+      "task_acceptable": true,
+      "median_teort_s": 4.55,
+      "max_teort_s": 7.36,
+      "median_mean_glance_s": 1.14,
+      "share_with_dms_alert": 0.0
+    }
+  ],
+  "ddaw_demo": {
+    "participants_total": 12,
+    "participants_counted": 11,
+    "tp_plus_fn": 12,
+    "sample_ok": true,
+    "n": 11,
+    "mean_sensitivity": 0.9545,
+    "sd": 0.1437,
+    "lower_bound": 0.7181,
+    "req_mean": 0.4,
+    "req_lb": 0.2,
+    "crit_a": true,
+    "crit_b": true,
+    "effective": true,
+    "data_origin": "SYNTHETIC"
+  },
+  "runtime_s": 89.7
+}

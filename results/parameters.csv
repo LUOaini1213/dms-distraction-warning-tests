@@ -1,0 +1,51 @@
+﻿parameter,value,provenance,kind
+name,PROPOSED,-,-
+dt,0.03333333333333333,DA-01 30 Hz 注视/眼睑输出（Euro NCAP SD-202 §1 只规定试验录像 ≥25 Hz）,设计假设
+v_distraction_kph,20.0,"EU 2023/2590 ADDW Annex I Part 1 §3.1.1, §3.3.2.2; Euro NCAP DE v1.2 §1.1",法规/规程
+v_drowsy_kph,50.0,"Euro NCAP DE v1.2 §1.1, §1.3.2（DDAW §3.1.4 只要求 >70 km/h 激活）",法规/规程
+calib_time_s,20.0,DA-22 标定 20 s（ADDW §3.1.1 ≤60 s；Euro NCAP DE §1.1 ≤1 min）,设计假设
+calib_speed_kph,10.0,Euro NCAP DE v1.2 §1.1（≥10 km/h）,法规/规程
+t_long_s,3.3,DA-04 = ADDW §3.3.2.1 的 3.5 s 减 0.2 s 端到端时延预算；落在 Euro NCAP §1.2.1 的 3–4 s 内,设计假设
+t_long_low_s,,DA-04 PROPOSED 不分速度档（ADDW_MIN 预设用 ADDW §3.3.2.2 的 6 s）,设计假设
+v_high_kph,50.0,EU 2023/2590 ADDW §3.3.2.1 (a),法规/规程
+t_pre_s,2.0,DA-05 视觉预警 2.0 s（参考 NHTSA VI.E.14 的 2.0 s 单次扫视准则）,设计假设
+gap_tol_s,0.3,DA-03 中断容差 0.3 s（ADDW §3.3.2.4 要求 ≥50 ms）,设计假设
+vats_enabled,True,Euro NCAP DE v1.2 §1.2.2（ADDW 未要求，见其序言 (3)）,法规/规程
+vats_window_s,30.0,Euro NCAP DE v1.2 §1.2.2,法规/规程
+vats_threshold_s,10.0,Euro NCAP DE v1.2 §1.2.2,法规/规程
+vats_pre_s,7.0,DA-06 累计 7 s 视觉预警,设计假设
+vats_reset_s,2.0,DA-06 T_VATS_reset = 2.0 s（Euro NCAP SD-202 §4.1.1.2 由厂家申报）,设计假设
+counted_regions,infotainment / off_road / phone,DA-18 计入分心的标签：infotainment / phone / off_road,设计假设
+unknown_counts,False,DA-03 unknown 不计入（超过容差冻结计时）,设计假设
+t_haptic_after_s,1.5,DA-07 声学后 1.5 s 仍未消除 → 触觉（ADDW §3.4.1.1 允许逐级加强）,设计假设
+repeat_window_s,60.0,DA-08 60 s 内再次报警直接触觉（ADDW §3.4.1.2 允许按历史事件调整）,设计假设
+min_acoustic_s,1.0,DA-09 声学最短 1.0 s（ADDW §3.4.3.4 要求“足以理解”）,设计假设
+visual_hold_s,2.0,DA-09 视觉保持 2.0 s,设计假设
+t_unresp_gaze_s,3.0,Euro NCAP DE v1.2 §1.3.5,法规/规程
+eyelid_closed,0.8,DA-10 眼睑闭合度 ≥0.8 记为闭眼（P80 约定）,设计假设
+perclos_window_s,60.0,DA-11 PERCLOS 窗口 60 s（DDAW Part 2 §5.2.1(a) 只点名 PERCLOS，无阈值）,设计假设
+perclos_l1,0.12,DA-12 信息级,设计假设
+perclos_l1_exit,0.08,DA-12 信息级退出（滞回）,设计假设
+perclos_l2,0.2,DA-12 报警级，假设对应 KSS≥8（DDAW §3.3.1），未经标定,设计假设
+perclos_l2_exit,0.15,DA-12 报警级退出（滞回）,设计假设
+l2_alert_s,3.0,DA-13 单次疲劳声学报警时长,设计假设
+l2_repeat_s,120.0,DA-13 疲劳报警重复间隔,设计假设
+t_microsleep_s,1.2,DA-14 1.2 s，在 Euro NCAP DE §1.3.3 的 1–2 s 内,设计假设
+t_sleep_s,3.0,Euro NCAP DE v1.2 §1.3.4；SD-202 §1.1 固定 3 s,法规/规程
+t_unresp_eyes_s,6.0,Euro NCAP DE v1.2 §1.3.5,法规/规程
+microsleep_hold_s,2.0,DA-14 睁眼后保持 2 s,设计假设
+microsleep_to_l2,2,DA-15 5 min 内 2 次微睡眠 → 疲劳报警级,设计假设
+microsleep_memory_s,300.0,DA-15,设计假设
+t_inform_s,5.0,DA-16 5 s 提示（Euro NCAP DE §1.1.1.2 要求 10 s 内）,设计假设
+t_fail_confirm_s,1.0,DA-16 故障/无光照去抖 1.0 s（ADDW §3.5.1.3）,设计假设
+t_recover_s,2.0,DA-16 恢复判定 2.0 s,设计假设
+t_fss_on_s,0.8,DA-17 0.8 s（Euro NCAP DE §1.4.3.1 要求 ≤1 s）,设计假设
+t_fss_off_road_s,1.0,Euro NCAP DE v1.2 §1.4.3 表（≥1 s 路面注视后结束）,法规/规程
+t_fss_off_state_s,2.0,Euro NCAP DE v1.2 §1.4.3 表（状态结束 ≥2 s 后结束）,法规/规程
+declared_lga_s,3.4,DA-02 申报值 = 3.3 s 阈值 + 0.1 s 名义时延；须在 Euro NCAP 3–4 s 内,设计假设
+declared_microsleep_s,1.3,DA-02 申报值 = 1.2 s + 0.1 s；须在 Euro NCAP 1–2 s 内,设计假设
+declared_vats_s,10.0,Euro NCAP DE v1.2 §1.2.2,法规/规程
+DA-19,-,DA-19 合成自然驾驶模型：半马尔可夫扫视（道路停留中位 3.5 s）、眨眼 17 次/min、标签闪变/跟踪丢失/整段误分类、驾驶相关情境（变道、汇入回头看、路口左右扫视、导航查看、设定 ACC），见 dms/scenarios.py NaturalParams,设计假设（模型/目标）
+DA-20,-,DA-20 NHTSA 任务模型：各步骤基准扫视时长、年龄系数 1.00/1.00/1.10/1.25、个体系数 σ=0.12、单次散布 σ=0.20、地址需输入 14 个字符、每次扫视输入 2–4 个字符；语音方案识别错误率 12 %,设计假设（模型/目标）
+DA-21,-,"DA-21 DDAW 演示用 KSS→眼睑模型：眨眼 0.3 次/s，闭眼比例 0.03 + 0.045·max(0, KSS−5)^1.3，个体敏感度 σ=0.3（虚构）",设计假设（模型/目标）
+DA-23,-,DA-23 设计目标：合成自然驾驶中误报 ≤1 次/h，且注入的分心事件 100 % 按 Euro NCAP 时限检出,设计假设（模型/目标）

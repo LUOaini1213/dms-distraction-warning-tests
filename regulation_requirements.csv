@@ -1,0 +1,121 @@
+﻿source,clause,requirement_paraphrase,parameter_threshold,verified,url
+EU 2019/2144 GSR,Art. 3(5),DDAW 定义：通过车辆系统分析评估驾驶员警觉度，必要时报警（读的是 PE-CONS 82/19 最终文本）,车辆系统分析,Y,https://data.consilium.europa.eu/doc/document/PE-82-2019-INIT/en/pdf
+EU 2019/2144 GSR,Art. 3(6),ADDW 定义：帮助驾驶员持续关注交通状况，并在分心时报警,-,Y,https://data.consilium.europa.eu/doc/document/PE-82-2019-INIT/en/pdf
+EU 2019/2144 GSR,Art. 6(1)(c)(d),机动车须装备驾驶员疲劳与注意力报警（DDAW）和高级驾驶员分心报警（ADDW）,所有机动车类别（M、N）,Y,https://data.consilium.europa.eu/doc/document/PE-82-2019-INIT/en/pdf
+EU 2019/2144 GSR,Art. 6(3),"DDAW/ADDW 只在闭环内记录、保留必要数据，任何时候不得对第三方开放，处理后立即删除；两系统须避免重叠，不得因同一动作分别、同时或令人困惑地提示驾驶员",-,Y,https://data.consilium.europa.eu/doc/document/PE-82-2019-INIT/en/pdf
+EU 2019/2144 GSR,Annex II E2/E3,附件 II 表：E2 DDAW 适用代码 B；E3 ADDW 适用代码 C（并注明“技术手段避免分心也可考虑”）,B / C,Y,https://data.consilium.europa.eu/doc/document/PE-82-2019-INIT/en/pdf
+EU 2019/2144 GSR,Annex II 表注 B/C,"代码 B：自适用日起拒绝新型式认证，24 个月后禁止注册；代码 C：适用日后 24 个月拒绝新型式认证，48 个月后禁止注册（PE-CONS 文本中日期为占位符，具体日期见 ADDW 解释备忘录与 DDAW 第 6 条）",B：DoA / DoA+24 个月；C：DoA+24 / DoA+48 个月,Y,https://data.consilium.europa.eu/doc/document/PE-82-2019-INIT/en/pdf
+EU 2023/2590 ADDW,Art. 1,适用于 M、N 类机动车（读的是 Commission 通过文本 C(2023) 4523 final，经理事会文件 ST 11895/23 转交）,M、N 类,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-INIT/en/pdf
+EU 2023/2590 ADDW,Art. 5,自 2024-07-07 起适用；2024-01-01 起厂家可申请按本法规认证,2024-07-07,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-INIT/en/pdf
+EU 2023/2590 ADDW,解释备忘录 §1,M、N 类新车型自 2024-07-07、所有新车自 2026-07-07 起须装备 ADDW,2024-07-07 / 2026-07-07,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-INIT/en/pdf
+EU 2023/2590 ADDW,序言 (2),鉴于技术不成熟与驾驶员差异，性能要求定在现实可达水平并保持技术中立；本法规聚焦长时视觉分心,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-INIT/en/pdf
+EU 2023/2590 ADDW,序言 (3),"下一阶段（2027 年 7 月前）再制定：间歇分心、认知等非视觉分心、身体动作（如回头看后方）、技术手段避免分心——即累计扫视目前不是 ADDW 要求",2027-07,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-INIT/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §2.1,判断驾驶员的视觉注意力何时未指向驾驶任务，并通过车辆 HMI 提醒,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §2.2,设计上尽量降低真实驾驶条件下的误报率（假阳性）,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §2.3.1–2.3.3,"不依赖乘员的生物特征个人数据、不做身份识别（可以使用摄像头数据）；只在闭环内持续记录、保留系统运行必需的数据；符合欧盟数据保护法",-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.1.1,车速高于 20 km/h 自动激活（厂家可设更低）；允许在 ≥20 km/h 下累计至多 1 min 用于开始测量和标定,20 km/h；60 s,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.1.2,驾驶员可手动关闭 ADDW 报警或 ADDW 系统（由厂家选择提供哪种或两种）,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.1.3,"另一系统持续接管全部动态驾驶任务且有合适 DMS，或驾驶员操作的纵横向持续辅助系统激活且含合适 DMS 时可自动停用；条件消失后自动恢复",-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.1.4,在 §3.5 的故障条件下 ADDW 系统不得自动停用，但分心报警可以自动停发,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.1.5,其他驾驶辅助系统正在报警紧急危险或临界情况时，可自动停发分心报警；条件消失后应恢复,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.1.6,每次激活车辆主控开关后，系统（含 HMI 报警）自动恢复正常工作模式,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.2.1,白天和夜间均应有效工作,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.3.1,"在关注区域内监测驾驶员注视；注视起点为眼参考点（UN R46 眼点，座椅 R 点上方 635 mm；非 M1 平台的重型车可用 UN R167 的 E2 点）",635 mm,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.3.1.1,Area 1：车顶与 ±55° 竖直平面以外的区域（原文为 overlap，而 Area 2 用 union；本项目按并集理解【解释未核实】）,±55°,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.3.1.2,Area 2：风挡和车窗，以及从眼参考点看其周围 10° 的区域,10°,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.3.1.3–3.3.1.4,"Area 3：眼参考点向下 30° 平面以下的区域，默认排除 Area 1 和 Area 2；厂家可把 Area 1/2 的一部分并入 Area 3；区域之间按角坐标投影",30°,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.3.2.1,"车速 ≥50 km/h 且注视 Area 3 持续最多 3.5 s（标称情况）即须报警；非标称情况可再延长 1.5 s；试验时另加缓冲时间补偿测量不确定度",50 km/h；3.5 s；+1.5 s,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.3.2.2,车速 ≥20 km/h 且注视 Area 3 持续最多 6 s（标称情况）即须报警；非标称情况可再延长 1.5 s,20 km/h；6 s；+1.5 s,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.3.2.3,只要系统已激活且能测量，注视 Area 3 的时长就持续计时，与车速无关,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.3.2.4,计时不因图像处理伪影或“进-出-进”的短暂视线变化而复位；容差由厂家定义，最小 50 ms（眼跳）,≥50 ms,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.3.2.5–3.3.2.6,厂家可设更低的最低车速；可基于驾驶员行为、认知分心或车内环境等附加输入增加报警策略,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.4.1.1,"视觉报警用于告知，声学和/或触觉报警用于警示，触发后尽快发出；可逐级加强直到触发条件不再成立；报警起点定义为声学或触觉报警出现的时刻",-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.4.1.2,可根据历史事件、驾驶行为、道路、天气等情境调整报警策略，但须满足 §3.4.2–§3.4.4 的技术准则,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.4.2–3.4.4,"视觉：昼夜易见、常亮或闪烁；声学：大部分在 200–8000 Hz 和 50–90 dB（可随环境噪声调整），语音与文字一致，可听部分持续到足以理解；触觉：可被感知",200–8000 Hz；50–90 dB,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.5.1.1–3.5.1.2,检测到永久故障时给出恒定的视觉故障信号；系统运行前至少完成一次自检，之后可电检测的故障须指示,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.5.1.3,识别非临时的传感器遮挡事件（至少包括系统激活时传感器测不到光）并给出故障信号,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.5.1.4,故障一经检测须保留，并在每次主控开关激活后持续显示，直至故障消失,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.5.2.1–3.5.2.2,"临时非电气故障可显示故障信号；须告知驾驶员当前或典型局限（如面部特征不足导致临时失效），可用主动的附加视觉提示或被动的书面说明",-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 1 §3.6,定期技术检验时可通过故障信号状态和电子车辆接口检查系统状态与软件完整性,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 2 §1.2.2–1.3.1,"抽查试验：显示车速测量精度 ±1 km/h；至少 1 名试验驾驶员，眼位在眼参考点 ±100 mm（纵向）/±50 mm（垂向）内，不戴眼镜或头部饰物、无面部毛发（厂家可放宽）",±1 km/h；±100 / ±50 mm,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 2 §1.4.2,"注视点须覆盖区域 (a)–(n)：左/右膝、腿部、副驾脚坑、副驾座面、手套箱、左/右出风口、仪表、方向盘按键、换挡杆、空调控制、信息娱乐屏、中控台；车内存在且尽可能位于 Area 3 时测试",14 个区域,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 2 §1.5.1,每个注视点至少在 20–35 km/h 测一次、在 50–65 km/h 测一次,20–35 km/h；50–65 km/h,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 2 §1.6,在实际或模拟的白天和夜间条件下试验,-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 2 §2.3.1/§2.3.5/§2.3.9,达到试验车速且系统判定驾驶员未分心至少 60 s 后开始；每个注视点测量前后系统判定未分心至少 15 s,60 s；15 s,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 2 §2.3.8,试验驾驶员保持注视，直到报警发出或超过期望报警时间至少 3 s,+3 s,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 2 §3.1,注视点位于 Area 3、属 §3.3.2.1 情形时，4 s 内（含 0.5 s 不确定度缓冲）无分心报警即为假阴性,4.0 s,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 2 §3.2,注视点位于 Area 3、属 §3.3.2.2 情形时，6.5 s 内（含 0.5 s 缓冲）无分心报警即为假阴性,6.5 s,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 2 §4–§6,"假阴性注视点最多复测 2 次，每次换一种分心动作；两次复测都为假阴性记为 fail；任一 fail 则抽查不通过，否则通过",最多 2 次,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2023/2590 ADDW,Annex I Part 3 §1–§3,"文件包：系统局限、激活与车速范围、全部输入与指标、Area 1/2/3 与注视点区域、HMI 及报警重复/升级策略、真人重复试验的验证证据（受试者人数与人口学特征、条件、天气与照明）",-,Y,https://data.consilium.europa.eu/doc/document/ST-11895-2023-ADD-1/en/pdf
+EU 2021/1341 DDAW,Art. 1,适用于最高设计车速超过 70 km/h 的 M、N 类机动车（读的是 EEA 官方挪威语译本，数值无歧义，措辞为本项目翻译）,>70 km/h,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Art. 6,自 2022-07-06 起适用,2022-07-06,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 1 §2.1/§2.3.1,监测驾驶员疲劳水平并通过 HMI 报警；正常工作时不使用乘员的生物特征信息（包括人脸识别）,-,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 1 §3.1.1–3.1.3,"驾驶员不能手动关闭 DDAW 系统（可关闭 HMI 报警，恢复所需操作不多于关闭）；每次主开关激活后恢复正常；厂家可增加条件：打开驾驶员门或熄火不超过 15 min",15 min,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 1 §3.1.4–3.1.6,"车速高于 70 km/h 自动激活；激活后在 65–130 km/h（或车辆最高车速）范围工作，高于 130 km/h 不自动停用；满足激活条件后 5 min 内开始主动监测",70 km/h；65–130 km/h；<5 min,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 1 §3.2.1–3.2.3,昼夜有效；天气不限制运行时工作；至少在两侧车道线可见的多车道道路上有效,-,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 1 §3.3.1,疲劳水平相当于 KSS ≥8 时必须报警；KSS 7 时可以报警；报警前可有 HMI 信息策略,KSS 8（7 可选）,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 1 §3.3.2,"分析其他车辆系统识别疲劳迹象（转向微修正减少而大幅快速修正增多、车道内横向位置波动增大），推荐监测车道位置或转向操作；可用其他准确稳定的方法；可加辅助参数（含生理参数）",-,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 1 §3.4.1.1/§3.4.3.2,"视觉和声学等报警在触发后尽快发出，可加强直到驾驶员确认（驾驶行为改善可视为确认）；声学报警大部分在 200–8000 Hz、50–90 dB",200–8000 Hz；50–90 dB,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 1 §3.5.1/§3.5.3,系统故障时点亮恒定警告；非电气故障（如传感器遮挡，阳光造成的临时遮挡除外）也须显示故障信号,-,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 1 附录,参考量表 KSS 1–9 级（8 = 困倦，需要一些努力保持清醒；9 = 非常困倦，与睡意斗争）,KSS 1–9,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 2 §3.1/§3.4,"至少 10 名受试者；每人至少产生 1 个真阳性或假阴性，合计至少 10 个；最少的 10 人不得参与过系统开发",10 人；TP+FN ≥10,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 2 §5.1.2,约每 5 min 自评一次 KSS，每次评分视为覆盖前 5 min,5 min,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 2 §5.1.4–5.1.5,"前一次或后一次评分 KSS ≥7 时的报警为真阳性；评分跨越阈值（如 6→8）而无报警为假阴性，除非再测一个间隔：再次 ≥8 为假阴性，=7 为真阴性并标为异常值，<7 则剔除该次试验",KSS 7 / 8,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 2 §5.2.1(a),可用直接监测受试者状态的替代测量，例如 EEG 或 PERCLOS（眼睑闭合时间百分比）,未规定 PERCLOS 阈值,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 2 §6.1,使用 KSS 以外的测量时，须说明所用阈值并证明其与 KSS 8 的对应关系,KSS 8,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 2 §8.1,"有效性判据：平均灵敏度 >40 % 或 90 % 置信区间下界（均值 − 1.645 × 标准差）>20 %；评分间隔 >15 min 时各加 5 / 2.5 个百分点，开放道路试验各减 5 / 2.5 个百分点（公式为图片，标准差分母按译文碎片重建为参与人数【未核实】）",40 %；20 %；1.645,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+EU 2021/1341 DDAW,Annex I Part 2 §8.2,若有学习期，判据不计学习期内或激活后 30 min 内（取较短者）的结果,30 min,Y,https://www.efta.int/sites/default/files/media/documents/legal-texts/eea/other-legal-documents/translated-acts/norwegian/n32021R1341.pdf
+Euro NCAP DE v1.2,评分表,"驾驶员参与度 30 分：驾驶员监测 25 分（瞬态 15：长时分心 5、短时分心 5、手机使用 5；非瞬态 10：损伤 4、微睡眠 2、睡眠 2、无响应 2），通用车辆控制 5 分（Safe Driving – Driver Engagement Protocol v1.2，2026-07，2026-01 实施）",30 / 25 / 5 分,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.1 一般要求（默认开启）,DSM 每次行程开始默认开启，不能用一次短按按钮关闭；驾驶员状态检测灵敏度不可手动调整,-,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.1 一般要求（开始测量）,DSM 持续监测；允许累计 1 min、车速 ≥10 km/h 的行驶后才开始测量驾驶员状态,1 min；10 km/h,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.1 一般要求（车速）,"分心、微睡眠、睡眠、无响应状态在 ≥20 km/h 时报警和/或干预；损伤状态在 ≥50 km/h，允许每次行程开始后在 ≥50 km/h 下最多 10 min 学习期",20 km/h；50 km/h；10 min,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.1.1.1–1.1.1.2,"噪声变量：年龄 16–18 至 80 岁、身材 AF05–AM95、肤色 Fitzpatrick 1–6、眼睑开度 6–12 mm、照度 100000–1 lux、透光 >70 % 的眼镜、口罩、短/长胡须须正常工作；透光 <15 % 墨镜、帽子、单手 12 点握方向盘、长刘海遮眼、浓睫毛妆：不能工作时须提示",见左,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.1.1.2 Inform if not functional,"性能下降到不能工作时，在遮挡出现后 10 s 内用视觉和/或听觉提示；听觉提示每次行程最多一次；不能工作期间视觉信息持续显示或每 [10] min 显示一次",10 s,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,定义 Degraded / Non-functional,直接式 DMS 的某个子系统完全不可用（如眼动跟踪丢失，因而无法识别 lizard 型动作）为降级；整个系统不可用为不工作,-,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.2.1,"长时分心：单次离开前方道路 3–4 s；验证时之前须有 4 s 的道路注视；注视位置按 owl / lizard / body lean 和驾驶 / 非驾驶任务列出；按动作类型判定 PASS/FAIL",3–4 s；前置 4 s,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.2.2,"短时分心（VATS）：30 s 内累计离开前方道路 10 s；注意力回到前方道路足够久时结束；替代检测策略同样可得分；驾驶与非驾驶任务可用不同策略",10 s / 30 s,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.2.3,手机使用是 VATS 的一种（反复注视手机）；分基础（膝、腿部、仪表台支架、充电位等）和高级（握在方向盘 9–11/13–15 点、举在风挡或仪表视野中）位置,-,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.3.2,疲劳：最迟在驾驶员达到 KSS >7（或评估危险疲劳的等效指标）时检测；自 50 km/h 起工作,KSS >7；50 km/h,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.3.3,微睡眠：短时闭眼 1–2 s；厂家可加其他输入（如先前疲劳积累）,1–2 s,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.3.4,睡眠：持续闭眼 ≥3 s,3 s,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.3.5,无响应：分心报警发出后 3 s 内视线未回到前方道路，或闭眼 ≥6 s；可用更早判定无响应的其他手段,3 s；6 s,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.4 车辆响应表,驾驶相关注视（后视镜、仪表等）的长时/短时分心只有干预分（前向/车道支持灵敏度），没有报警分,-,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.4.1,"车速 ≥20 km/h 时，判定分心后立即发出视觉 +（触觉和/或声音）报警；同时具备报警和干预的系统，可在驾驶员确认首次报警后对瞬态状态启用报警抑制，新行程开始时恢复",20 km/h,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.4.2,"判定疲劳、（微）睡眠或无响应后立即发出视觉 +（触觉和/或声音）报警；疲劳可改为在导航中推荐休息区；微睡眠和睡眠报警须与分心、疲劳报警区分，且紧迫感更高",-,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.4.3 表,干预结束条件：所有瞬态状态在状态结束 ≥2 s 后；短时离开道路的注视在连续注视前方道路 ≥1 s 后；驾驶员不得手动恢复基线灵敏度,2 s；1 s,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.4.3.1,"FCW/AEB 与驾驶员状态联动：分心/损伤与专注时的触发时刻至少相差 200 ms（至少 CCRs、CMRs、CCRm）；任何连续离开道路的注视在 ≤1 s 内、判定为非瞬态状态后立即激活",200 ms；1 s,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§1.4.3.3,紧急功能（EF）须在独立报警阶段开始后不迟于 5 s 介入（使车辆进入辅助模式）,5 s,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP DE v1.2,§2.3.3,"导航到 POI / 已存地点 / 地址：须为直接语音输入，并有语音命令的替代控制和专用语音按键；结束导航可用物理、语音或直接触控输入",-,Y,https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf
+Euro NCAP SD-202 v1.2,§1/§1.1,"视频采样 ≥25 Hz；厂家申报的长时分心 ΔT_LGA 须在 3–4 s；ΔT_VATS 由厂家实现决定；ΔT_sleep 固定 3 s；ΔT_microsleep 在 1–2 s；T0 = T_away − 4.0 s",25 Hz；3–4 s；3 s；1–2 s,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+Euro NCAP SD-202 v1.2,§3.2.1,试验前以 ≥10 km/h 完全专注行驶至少 1 min；检查默认开启、不能单次短按关闭、灵敏度不可调,1 min；10 km/h,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+Euro NCAP SD-202 v1.2,§3.2.3.2,动作过渡时间上限：owl 0.48 s，lizard 0.16 s，body lean 1.0 s；body lean 注视最多 5 s,0.48 / 0.16 / 1.0 s,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+Euro NCAP SD-202 v1.2,§4/附录 A,每项报警与干预试验随机佩戴一种遮挡配件：鸭舌帽、无檐帽、透光 <15 % 墨镜、口罩,-,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+Euro NCAP SD-202 v1.2,§4.1,报警时刻试验：直线行驶 20–80 km/h；T0 到 T_away 期间完全注视前方道路；报警发出即结束,20–80 km/h,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+Euro NCAP SD-202 v1.2,§4.1.1.1,长时分心：注视最多 5 s，报警后视线直接回到道路；容差 [0.2] s（方括号为暂定值；容差示意图为图片未能读取，本项目按 ±0.2 s 处理【判定口径未核实】）,5 s；[0.2] s,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+Euro NCAP SD-202 v1.2,§4.1.1.2,短时分心与手机使用：按厂家 VATS 策略执行，路面注视短于 T_VATS_reset；报警预期在 ΔT_VATS ± [2.0] s,[2.0] s,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+Euro NCAP SD-202 v1.2,§4.1.2.2–4.1.2.3,微睡眠：保持头部中立闭眼最多 4 s，容差 [0.2] s；睡眠：闭眼最多 7 s，容差 [0.2] s,4 s；7 s；[0.2] s,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+Euro NCAP SD-202 v1.2,§4.2.2.1,前向支持灵敏度抽查：在 CCRs、CMRs 或 CCRm 中随机选用例，30–80 km/h；时延试验中 T_gaze 落在 T_FSS_inatt 之前 1.3–1.5 s,30–80 km/h；1.3–1.5 s,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+Euro NCAP SD-202 v1.2,§4.2.3.3,无响应：闭眼至少 13 s（睡眠选项）或注视腿部至少 14 s（分心选项），触发 EF 独立报警和 EF 介入,13 s；14 s,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+Euro NCAP SD-202 v1.2,§4.3,不工作试验：手握方向盘上部遮挡仪表处安装的 DMS 至少 10 s,10 s,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+Euro NCAP SD-202 v1.2,§4.4,实路评估：试验驾驶员手动标注不相关的 DMS 报警/干预（例如注视道路时出现分心报警）；严重的驾驶员接受度问题可导致扣分,-,Y,https://cdn.euroncap.com/cars/assets/SD_202_Driver_Monitoring_Test_Procedure_v1_2_d3420cb629.pdf
+ASEAN NCAP Overall v3.1,§1,"2026–2030 评级四大支柱 AOP / COP / SA / MS；SA 满分 23.5 分、占总分 20 %，包括 EBA、车道支持、SBR、AEB 和 Advanced SATs；驾驶员监测未列为单独评分项",23.5 分；20 %,Y,https://www.aseancap.org/uploads/documents/ASEAN-NCAP-Overall-Assessment-Protocol-Version-3.1.pdf
+ASEAN NCAP SA v3.2,§1/§2,"Safety Assist 范围：AEB（城市/城际）、SBR、EBA（ABS/ESC）、车道支持（LKA/LDW）和 Advanced SATs；Advanced SATs 以厂内试验数据/相关法规或装配要求验证（2026–2030 规程列表中的 v3.2，文件名日期 2026-01-13）",-,Y,https://www.aseancap.org/uploads/documents/ASEAN-NCAP-Assessment-Protocol-Safety-Assist-Version-3.2-13012026.pdf
+ASEAN NCAP SA v3.2,§7.2.4,驾驶员状态监测（DSM）的功能定义：用仪表台摄像头跟踪驾驶员疲劳或分心，并发出报警把注意力拉回驾驶任务,无任何阈值,Y,https://www.aseancap.org/uploads/documents/ASEAN-NCAP-Assessment-Protocol-Safety-Assist-Version-3.2-13012026.pdf
+ASEAN NCAP SA v3.2,§7.3.1,目前不对 Advanced SATs 做场地试验，按 §7.2 的功能定义评估符合性，必要时要求厂家完整演示,无性能试验,Y,https://www.aseancap.org/uploads/documents/ASEAN-NCAP-Assessment-Protocol-Safety-Assist-Version-3.2-13012026.pdf
+ASEAN NCAP SA v3.2,§7.4/§7.5,"方案 A：每项标配或选装的 SAT 得 1 分，本节最多 2 分（即 3 项）；方案 B：按 Fitment Rating System v2.0 计分，每项最多 1 分，合计最多 2 分",1 分/项；上限 2 分,Y,https://www.aseancap.org/uploads/documents/ASEAN-NCAP-Assessment-Protocol-Safety-Assist-Version-3.2-13012026.pdf
+ASEAN NCAP IVASA ICI-TP,IVASA 页面,"IVASA 是星级评价之外的独立项目（beyond rating），主要面向 L2/L2+ 车辆；智能座舱交互类评价 DMS 与语音交互；结果分 G / A / M / W / P 五级",-,Y,https://aseancap.org/ivasa
+ASEAN NCAP IVASA ICI-TP,§3.1.2/§3.2,DMS 试验在白天照度 2000–10000 lx、无明显外部反光下进行；眼动仪采样 ≥60 Hz、注视精度 ±0.5°,2000–10000 lx；≥60 Hz；±0.5°,Y,https://aseancap.org/uploads/page_content/p46/20261008085805_9eabdf87f211.pdf
+ASEAN NCAP IVASA ICI-TP,§4.1.1,分心监测：达到 DMS 激活车速后，依次注视中控大屏、副驾脚坑、手机充电区或中央扶手各 5 s；每场景 3 次；在阈值时间内报警为成功,5 s；3 次,Y,https://aseancap.org/uploads/page_content/p46/20261008085805_9eabdf87f211.pdf
+ASEAN NCAP IVASA ICI-TP,§4.1.2,疲劳监测：双眼闭合 5 s，3 次；动作在达到报警阈值后再保持 2 s；动作期间头部航向、横滚、俯仰角各保持在 20° 以内,5 s；+2 s；20°,Y,https://aseancap.org/uploads/page_content/p46/20261008085805_9eabdf87f211.pdf
+NHTSA VM-DDG 2013,摘要/I,"非强制、自愿性指南（78 FR 24818，2013-04-26，Docket NHTSA-2010-0053）；第一阶段只覆盖原厂车载设备的视觉-手动交互，听觉-语音交互留待后续阶段",-,Y,https://www.govinfo.gov/content/pkg/FR-2013-04-26/pdf/2013-09883.pdf
+NHTSA VM-DDG 2013,IV.A.6,"“驾驶中”：动力系统激活，除非变速器在 P 挡（无 P 挡时：驻车制动 + 空挡 + 车速 <5 mph）",5 mph,Y,https://www.govinfo.gov/content/pkg/FR-2013-04-26/pdf/2013-09883.pdf
+NHTSA VM-DDG 2013,IV.A.9–IV.A.10,扫视为一次眼部注视；扫视时长 = 移向目标的过渡时间 + 在目标上的停留时间，不含离开目标的过渡,-,Y,https://www.govinfo.gov/content/pkg/FR-2013-04-26/pdf/2013-09883.pdf
+NHTSA VM-DDG 2013,V.F,"行驶中应始终锁止：非行车用功能、用于短信/通讯/上网的手动文本输入、视频、非行车图片、自动滚动文本、书报网页等阅读文本",-,Y,https://www.govinfo.gov/content/pkg/FR-2013-04-26/pdf/2013-09883.pdf
+NHTSA VM-DDG 2013,V.G,不满足任一种任务验收试验的任务应在行驶中锁止,-,Y,https://www.govinfo.gov/content/pkg/FR-2013-04-26/pdf/2013-09883.pdf
+NHTSA VM-DDG 2013,VI.A.4–VI.A.5,每个任务 24 名受试者：18–24、25–39、40–54、55 岁以上各 6 人；男女各 12 人且各年龄组平衡,24 人,Y,https://www.govinfo.gov/content/pkg/FR-2013-04-26/pdf/2013-09883.pdf
+NHTSA VM-DDG 2013,VI.E.14(a),至少 21/24 名受试者完成一次任务时，时长 >2.0 s 的离开道路扫视不超过扫视总数的 15 %（向上取整）,2.0 s；15 %；21/24,Y,https://www.govinfo.gov/content/pkg/FR-2013-04-26/pdf/2013-09883.pdf
+NHTSA VM-DDG 2013,VI.E.14(b),至少 21/24 名受试者完成一次任务时，离开道路扫视的平均时长 ≤2.0 s,2.0 s；21/24,Y,https://www.govinfo.gov/content/pkg/FR-2013-04-26/pdf/2013-09883.pdf
+NHTSA VM-DDG 2013,VI.E.14(c),至少 21/24 名受试者完成一次任务时，离开道路扫视的总时长 ≤12.0 s,12.0 s；21/24,Y,https://www.govinfo.gov/content/pkg/FR-2013-04-26/pdf/2013-09883.pdf
+NHTSA VM-DDG 2013,VI.G.17,遮挡法替代方案：至少 21/24 名受试者的平均总开启时间（TSOT）≤12.0 s,12.0 s,Y,https://www.govinfo.gov/content/pkg/FR-2013-04-26/pdf/2013-09883.pdf
+GB/T 41797-2022,标准信息,驾驶员注意力监测系统性能要求及试验方法；国家标准全文公开系统显示：现行，2022-10-12 发布，2023-05-01 实施；推荐性国家标准,-,Y,https://openstd.samr.gov.cn/bzgk/gb/std_list?p.p2=41797
+GB/T 41797-2022,技术条款,"【未核实】全文需在国家标准全文公开系统在线阅读（有验证码），本项目未访问；二手行业摘要提到闭眼、头部姿态异常、接打电话等报警条件，本项目未采用其中任何数值",【未核实】,N,https://openstd.samr.gov.cn/bzgk/gb/std_list?p.p2=41797

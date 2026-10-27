@@ -1,0 +1,16 @@
+{
+  "participants_total": 12,
+  "participants_counted": 11,
+  "tp_plus_fn": 12,
+  "sample_ok": true,
+  "n": 11,
+  "mean_sensitivity": 0.9545,
+  "sd": 0.1437,
+  "lower_bound": 0.7181,
+  "req_mean": 0.4,
+  "req_lb": 0.2,
+  "crit_a": true,
+  "crit_b": true,
+  "effective": true,
+  "data_origin": "SYNTHETIC"
+}

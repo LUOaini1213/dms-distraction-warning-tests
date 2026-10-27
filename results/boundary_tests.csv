@@ -1,0 +1,44 @@
+﻿test_id,requirement,config,parameter,threshold,value,expected_event,observed_event,event_time_s,note,verdict,data_origin
+BC-SPD-19.9,SYS-01,PROPOSED,报警车速门限,≥ 20 km/h,19.9 km/h,否,否,,,通过,SYNTHETIC
+BC-SPD-20,SYS-01,PROPOSED,报警车速门限,≥ 20 km/h,20 km/h,是,是,3.4,,通过,SYNTHETIC
+BC-SPD-20.1,SYS-01,PROPOSED,报警车速门限,≥ 20 km/h,20.1 km/h,是,是,3.4,,通过,SYNTHETIC
+BC-ADDWMIN-SPD-49.9,DIS-02,ADDW_MIN,ADDW 最低配置速度档,≥ 50 km/h 用 3.5 s，否则 6 s,49.9 km/h，注视 4.0 s,否,否,,,通过,SYNTHETIC
+BC-ADDWMIN-SPD-50,DIS-02,ADDW_MIN,ADDW 最低配置速度档,≥ 50 km/h 用 3.5 s，否则 6 s,50 km/h，注视 4.0 s,是,是,3.6,,通过,SYNTHETIC
+BC-SPD-CROSS,DIS-03,PROPOSED,计时与车速无关,15→30 km/h 期间注视 6 s,车速在 2.5 s 时越过 20 km/h,是,是,3.4,越过 20 km/h 时注视已 2.5 s；3.4 s（3.3 s + 时延）时报警，而非从越线时刻重新计时,通过,SYNTHETIC
+BC-LD-3.2,DIS-02,PROPOSED,长时注视阈值,≥ 3.3 s,注视 3.2 s,否,否,,,通过,SYNTHETIC
+BC-LD-3.3,DIS-02,PROPOSED,长时注视阈值,≥ 3.3 s,注视 3.3 s,是,是,3.4,,通过,SYNTHETIC
+BC-LD-3.4,DIS-02,PROPOSED,长时注视阈值,≥ 3.3 s,注视 3.4 s,是,是,3.4,,通过,SYNTHETIC
+BC-PRE-1.9,DIS-09,PROPOSED,视觉预警阈值,≥ 2.0 s,注视 1.9 s,否,否,,,通过,SYNTHETIC
+BC-PRE-2.1,DIS-09,PROPOSED,视觉预警阈值,≥ 2.0 s,注视 2.1 s,是,是,2.1,,通过,SYNTHETIC
+BC-ADDW-3.5,DIS-02,PROPOSED,ADDW §3.3.2.1 上限,≤ 3.5 s（试验 ≤ 4.0 s）,注视 3.5 s @55 km/h,是,是,3.4,,通过,SYNTHETIC
+BC-GAP-0.30,DIS-04,PROPOSED,中断容差,≤ 0.3 s 不复位,2.4 s 手机 + 0.30 s 路面 + 2.4 s 手机,是,是,3.4,,通过,SYNTHETIC
+BC-GAP-0.33,DIS-04,PROPOSED,中断容差,≤ 0.3 s 不复位,2.4 s 手机 + 0.33 s 路面 + 2.4 s 手机,否,否,,,通过,SYNTHETIC
+BC-BLINK,DIS-04,PROPOSED,眨眼不复位,unknown ≤ 0.3 s 计入,手机注视中 0.2 s 眨眼，总 3.6 s,是,是,3.4,,通过,SYNTHETIC
+BC-UNKNOWN-LONG,DIS-04,PROPOSED,长 unknown 冻结,> 0.3 s 冻结不复位,1.8 s 手机 + 1.0 s 不可测 + 2.0 s 手机,是,是,4.4,冻结期间不计时：报警比连续注视晚约 1.0 s,通过,SYNTHETIC
+BC-VATS-9.9,DIS-05,PROPOSED,VATS 累计阈值,≥ 10 s / 30 s,累计 9.9 s,否,否,,,通过,SYNTHETIC
+BC-VATS-10.1,DIS-05,PROPOSED,VATS 累计阈值,≥ 10 s / 30 s,累计 10.1 s,是,是,14.6,,通过,SYNTHETIC
+BC-VATSRESET-1.9,DIS-05,PROPOSED,VATS 复位,路面连续 ≥ 2.0 s 复位,6 × 1.8 s 离开（累计 10.8 s），第 3 次路面 1.9 s,是,是,15.6,,通过,SYNTHETIC
+BC-VATSRESET-2.1,DIS-05,PROPOSED,VATS 复位,路面连续 ≥ 2.0 s 复位,6 × 1.8 s 离开（累计 10.8 s），第 3 次路面 2.1 s,否,否,,,通过,SYNTHETIC
+BC-VATSWIN-0.6-1.4,DIS-05,PROPOSED,VATS 30 s 窗,窗内累计 ≥ 10 s,0.6 s 离开 / 1.4 s 路面，持续 60 s（窗内 9 s）,否,否,,,通过,SYNTHETIC
+BC-VATSWIN-0.8-1.2,DIS-05,PROPOSED,VATS 30 s 窗,窗内累计 ≥ 10 s,0.8 s 离开 / 1.2 s 路面，持续 60 s（窗内 12 s）,是,是,24.5,,通过,SYNTHETIC
+BC-MS-1.1,DRW-05,PROPOSED,微睡眠阈值,闭眼 ≥ 1.2 s,闭眼 1.1 s,否,否,,,通过,SYNTHETIC
+BC-MS-1.3,DRW-05,PROPOSED,微睡眠阈值,闭眼 ≥ 1.2 s,闭眼 1.3 s,是,是,1.3,,通过,SYNTHETIC
+BC-SLEEP-2.9,DRW-06,PROPOSED,睡眠阈值,闭眼 ≥ 3.0 s,闭眼 2.9 s,否,否,,,通过,SYNTHETIC
+BC-SLEEP-3.1,DRW-06,PROPOSED,睡眠阈值,闭眼 ≥ 3.0 s,闭眼 3.1 s,是,是,3.1,,通过,SYNTHETIC
+BC-UNRESP-5.9,DRW-07,PROPOSED,无响应阈值,闭眼 ≥ 6.0 s,闭眼 5.9 s,否,否,,,通过,SYNTHETIC
+BC-UNRESP-6.1,DRW-07,PROPOSED,无响应阈值,闭眼 ≥ 6.0 s,闭眼 6.1 s,是,是,6.1,,通过,SYNTHETIC
+BC-DROWSY-SPD-49.9,DRW-03,PROPOSED,疲劳功能车速门限,≥ 50 km/h,49.9 km/h，PERCLOS≈0.29,否,否,,,通过,SYNTHETIC
+BC-DROWSY-SPD-50,DRW-03,PROPOSED,疲劳功能车速门限,≥ 50 km/h,50 km/h，PERCLOS≈0.29,是,是,60.0,,通过,SYNTHETIC
+BC-PERCLOS-0.190,DRW-02,PROPOSED,PERCLOS 报警级,≥ 0.20,PERCLOS 0.190,否,否,,,通过,SYNTHETIC
+BC-PERCLOS-0.211,DRW-02,PROPOSED,PERCLOS 报警级,≥ 0.20,PERCLOS 0.211,是,是,60.0,,通过,SYNTHETIC
+BC-INFORM-4.9,AVL-03,PROPOSED,不可用提示,遮挡 ≥ 5 s 提示（规程 ≤ 10 s）,人脸丢失 4.9 s,否,否,,,通过,SYNTHETIC
+BC-INFORM-5.1,AVL-03,PROPOSED,不可用提示,遮挡 ≥ 5 s 提示（规程 ≤ 10 s）,人脸丢失 5.1 s,是,是,5.1,,通过,SYNTHETIC
+BC-FSS-0.7,DIS-08,PROPOSED,ADAS 灵敏度联动,连续离开路面 ≥ 0.8 s,后视镜扫视 0.7 s,否,否,,,通过,SYNTHETIC
+BC-FSS-0.9,DIS-08,PROPOSED,ADAS 灵敏度联动,连续离开路面 ≥ 0.8 s,后视镜扫视 0.9 s,是,是,0.9,,通过,SYNTHETIC
+BC-LAT-0,DIS-02,PROPOSED,端到端时延预算,ADDW ≤ 4.0 s；NCAP 3.4 ± 0.2 s,时延 0 s,ADDW 满足=是；NCAP 满足=是,ADDW 满足=是；NCAP 满足=是,3.3,时延预算扫描：判定的是预算边界是否落在计算值上，不是功能通过与否,通过,SYNTHETIC
+BC-LAT-0.1,DIS-02,PROPOSED,端到端时延预算,ADDW ≤ 4.0 s；NCAP 3.4 ± 0.2 s,时延 0.1 s,ADDW 满足=是；NCAP 满足=是,ADDW 满足=是；NCAP 满足=是,3.4,时延预算扫描：判定的是预算边界是否落在计算值上，不是功能通过与否,通过,SYNTHETIC
+BC-LAT-0.2,DIS-02,PROPOSED,端到端时延预算,ADDW ≤ 4.0 s；NCAP 3.4 ± 0.2 s,时延 0.2 s,ADDW 满足=是；NCAP 满足=是,ADDW 满足=是；NCAP 满足=是,3.5,时延预算扫描：判定的是预算边界是否落在计算值上，不是功能通过与否,通过,SYNTHETIC
+BC-LAT-0.3,DIS-02,PROPOSED,端到端时延预算,ADDW ≤ 4.0 s；NCAP 3.4 ± 0.2 s,时延 0.3 s,ADDW 满足=是；NCAP 满足=是,ADDW 满足=是；NCAP 满足=是,3.6,时延预算扫描：判定的是预算边界是否落在计算值上，不是功能通过与否,通过,SYNTHETIC
+BC-LAT-0.5,DIS-02,PROPOSED,端到端时延预算,ADDW ≤ 4.0 s；NCAP 3.4 ± 0.2 s,时延 0.5 s,ADDW 满足=是；NCAP 满足=否,ADDW 满足=是；NCAP 满足=否,3.8,时延预算扫描：判定的是预算边界是否落在计算值上，不是功能通过与否,通过,SYNTHETIC
+BC-LAT-0.7,DIS-02,PROPOSED,端到端时延预算,ADDW ≤ 4.0 s；NCAP 3.4 ± 0.2 s,时延 0.7 s,ADDW 满足=是；NCAP 满足=否,ADDW 满足=是；NCAP 满足=否,4.0,时延预算扫描：判定的是预算边界是否落在计算值上，不是功能通过与否,通过,SYNTHETIC
+BC-LAT-0.8,DIS-02,PROPOSED,端到端时延预算,ADDW ≤ 4.0 s；NCAP 3.4 ± 0.2 s,时延 0.8 s,ADDW 满足=否；NCAP 满足=否,ADDW 满足=否；NCAP 满足=否,4.1,时延预算扫描：判定的是预算边界是否落在计算值上，不是功能通过与否,通过,SYNTHETIC

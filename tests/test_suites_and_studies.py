@@ -1,5 +1,6 @@
 """Scenario suites (regulation, boundary), NHTSA criteria and the DDAW Part 2 computation."""
 import math
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -10,6 +11,8 @@ from dms import labels as L
 from dms import regulations as R
 from dms.config import ADDW_MIN, PROPOSED
 from dms.suites import addw_point_verdict, boundary_cases, evaluate, evaluate_boundary, regulation_cases
+
+RESULTS = Path(__file__).resolve().parents[1] / "results"
 
 
 @pytest.fixture(scope="module")
@@ -113,3 +116,26 @@ def test_ddaw_acceptance_formula():
     assert a["crit_a"] and not a["crit_b"] and a["effective"]
     assert ddaw.acceptance([0.38] * 10, open_road=True)["effective"]             # 35 % on an open road
     assert not ddaw.acceptance([0.42] * 10, interval_over_15min=True)["crit_a"]   # 45 % needed
+
+
+def test_false_alarm_tradeoff():
+    """Re-run the false-alarm study for PROPOSED, ADDW_MIN and gap tolerance 0.6 s on the same 16 synthetic drives
+    and compare with the committed results/false_alarm_summary.csv (the numbers quoted in README / report).
+    REQ: SYS-07"""
+    from dms import false_alarm
+
+    cfgs = [c for c in false_alarm.sweep_configs() if c.name in ("PROPOSED", "ADDW_MIN", "gap=0.6s")]
+    _, _, fa = false_alarm.study(configs=cfgs)
+    fa = fa.set_index("config")
+    p, a, g = fa.loc["PROPOSED"], fa.loc["ADDW_MIN"], fa.loc["gap=0.6s"]
+    # design ordering: PROPOSED has no false alarm and catches every injected episode on time
+    assert p.hours == 4.0 and p.long_glance_n + p.phone_vats_n == 32
+    assert p.false_alarms == 0 and p.long_glance_on_time_encap == 1.0 and p.phone_vats_on_time_encap == 1.0
+    # a wider interruption tolerance glues short driving glances into long ones -> false alarms
+    assert g.false_alarms > 0 and g.false_alarms_per_h > p.false_alarms_per_h
+    # the bare ADDW minimum has no VATS: no phone VATS episode is detected
+    assert a.phone_vats_detect_rate == 0.0 and a.long_glance_on_time_encap < 1.0
+    # and the committed CSV (source of the README table) matches this rerun exactly
+    committed = pd.read_csv(RESULTS / "false_alarm_summary.csv", encoding="utf-8-sig").set_index("config")
+    cols = [c for c in fa.columns if c != "data_origin"]
+    pd.testing.assert_frame_equal(fa[cols], committed.loc[fa.index, cols], check_dtype=False)

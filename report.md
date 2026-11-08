@@ -103,7 +103,7 @@
 | ADDW Part 2 抽查（Area 3，9 个区域 × 2 档车速） | 声音报警都在 T_away 后 3.4 s | ≤4.0 s（≥50 km/h）/ ≤6.5 s（20–35 km/h） |
 | Euro NCAP 长时分心（9 个非驾驶位置） | 3.4 s | 申报值 3.4 ± 0.2 s |
 | Euro NCAP VATS / 手机使用（19 例） | 14.6 / 14.9 s | 期望 14.5 / 14.8 ± 2.0 s |
-| 微睡眠 / 睡眠 / 无响应 | 1.3 / 3.1 / 6.1 s | 1.3 ± 0.2、3.0 ± 0.2、≥6 s |
+| 微睡眠 / 睡眠 / 无响应（闭眼、注视腿部两例） | 1.3 / 3.1 / 6.1 / 6.4 s | 1.3 ± 0.2、3 ± 0.2、6–6.3、6.2–6.6 s |
 | 手遮挡摄像头、墨镜 | 5.0–5.1 s 提示“DMS 受限” | ≤10 s |
 | 边界用例（43 个） | 全部按设计：阈值下方不触发、上方触发 | — |
 
@@ -149,7 +149,7 @@
 ## 8 需求追溯
 
 - 链路：条款 → 需求 → 场景测试 / 研究结果 / 单元测试 → 结果。
-- `traceability.csv` 共 413 行：120 条条款 → 56 条需求 → 155 个场景 / 研究结果 + 40 个单元测试。由 `dms/trace.py` 生成，`scripts/make_traceability.py` 会把单元测试判定写进矩阵。
+- `traceability.csv` 共 414 行：120 条条款 → 56 条需求 → 155 个场景 / 研究结果 + 41 个单元测试。由 `dms/trace.py` 生成，`scripts/make_traceability.py` 会把单元测试判定写进矩阵。
 - 完整性检查：条款→需求→测试、测试→需求→条款两个方向都不允许有孤立项，由脚本和单元测试共同检查；当前结果为“两个方向都无孤立项”。
 - DDAW 方法演示（`dms/ddaw.py`）：按 DDAW Part 2 的判定和有效性公式跑通了一遍计算（12 名合成参与者，平均灵敏度 0.95，下界 0.72，满足要求的 0.4 / 0.2）。数据是虚构的（DA-21），所以这只是证明计算流程，不是验证。
 
@@ -163,13 +163,14 @@
 
 ## 10 复现
 
-在本目录下运行（Windows 与 Linux 相同；依赖 numpy、pandas、matplotlib、pytest）：
+需要 Python 3.11 或更新版本（`pip install -r requirements.txt`；生成提交结果时用的精确版本见 `requirements-lock.txt`）。在本目录下运行：
 
 ```bash
-python -I scripts/run_all.py              # 全部结果、图和追溯矩阵，约 1.5–2.5 分钟
-python -I -m pytest -q tests              # 40 项
-python -I scripts/make_traceability.py    # 把单元测试判定写进追溯矩阵，并检查两个方向都无孤立项
+python -I scripts/run_all.py                 # 全部结果、图，再跑 41 项 pytest，最后生成追溯矩阵并检查两个方向都无孤立项
+python -I scripts/check_readme_numbers.py    # 核对 README 里的数字与结果文件一致
 ```
+
+GitHub Actions 在 Ubuntu 和 Windows、Python 3.11 和 3.12 上重跑，并确认除 PNG 以外的结果文件与仓库逐字节一致。
 
 代码只用相对路径（`pathlib`），随机数都固定种子，重复运行结果一致。
 

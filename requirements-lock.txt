@@ -1,0 +1,6 @@
+# Exact versions used to generate the committed results/ (needs Python 3.12+: numpy 2.5.0 has no 3.11 wheel).
+# requirements.txt holds the version ranges that CI tests on Python 3.11 and 3.12.
+numpy==2.5.0
+pandas==3.0.5
+matplotlib==3.11.0
+pytest==9.1.1

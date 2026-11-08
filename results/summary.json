@@ -104,6 +104,5 @@
     "crit_b": true,
     "effective": true,
     "data_origin": "SYNTHETIC"
-  },
-  "runtime_s": 89.7
+  }
 }

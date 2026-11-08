@@ -13,6 +13,9 @@ from dms import trace  # noqa: E402
 
 
 def main() -> int:
+    if not trace.junit_verdicts():
+        print("warning: results/pytest_junit.xml missing or empty; unit-test rows will read 未运行. "
+              "Run: python -I -m pytest -q tests --junitxml=results/pytest_junit.xml")
     problems = trace.build()
     print("traceability:", "OK" if not problems else f"{len(problems)} problems")
     for p in problems:

@@ -1,14 +1,17 @@
-"""Run every study and write results/ (CSV, JSON, tables.md, figures) and traceability.csv.
+"""Run every study, then the unit tests, and write results/ (CSV, JSON, tables.md, figures) and traceability.csv.
 
-    python -I scripts/run_all.py            # about 2-3 minutes, single process
-    python -I -m pytest -q tests --junitxml=results/pytest_junit.xml
-    python -I scripts/make_traceability.py  # refresh traceability.csv with the unit-test verdicts
+    python -I scripts/run_all.py            # about 1-3 minutes, single process; also runs pytest
+    python -I scripts/run_all.py --no-tests # studies only; unit-test rows in traceability.csv become "未运行"
+
+The unit tests run after the studies and write results/pytest_junit.xml (git-ignored), so the traceability
+matrix built at the end carries their verdicts.  Running the three documented steps one by one gives the same files.
 
 All inputs are SYNTHETIC (dms/scenarios.py); every results row carries data_origin = SYNTHETIC.
 """
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -43,7 +46,16 @@ def md_table(df: pd.DataFrame) -> str:
     return "\n".join(out)
 
 
+def run_pytest() -> int:
+    """Run the unit tests with a JUnit report so trace.build() can record their verdicts."""
+    cmd = [sys.executable, "-I", "-m", "pytest", "-q", "tests", "-p", "no:cacheprovider",
+           f"--junitxml={(RES / 'pytest_junit.xml').relative_to(ROOT).as_posix()}"]
+    print("running:", " ".join(cmd[1:]), flush=True)
+    return subprocess.call(cmd, cwd=ROOT)
+
+
 def main() -> int:
+    run_tests = "--no-tests" not in sys.argv[1:]
     RES.mkdir(exist_ok=True)
     t_start = time.perf_counter()
     # ------------------------------------------------------------------ 1 regulation cases, three presets
@@ -113,16 +125,21 @@ def main() -> int:
                                  if isinstance(v, (int, float))},
         "nhtsa": nh_sum.drop(columns=["data_origin"]).to_dict(orient="records"),
         "ddaw_demo": dd_sum,
-        "runtime_s": round(time.perf_counter() - t_start, 1),
-    }
+    }   # no wall-clock field: summary.json must be byte-identical across reruns
     (RES / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
-    # ------------------------------------------------------------------ 10 traceability
+    # ------------------------------------------------------------------ 10 unit tests, then traceability
+    rc_tests = 0
+    if run_tests:
+        rc_tests = run_pytest()
+        print(f"pytest: {'OK' if rc_tests == 0 else 'FAILED (exit ' + str(rc_tests) + ')'}")
+    else:
+        print("pytest skipped (--no-tests): unit-test rows in traceability.csv will read 未运行")
     problems = trace.build()
     print(f"traceability: {'OK' if not problems else str(len(problems)) + ' problems'}")
     for pr in problems:
         print("  -", pr)
     print(f"done in {time.perf_counter() - t_start:.0f} s")
-    return 1 if problems else 0
+    return 1 if (problems or rc_tests) else 0
 
 
 if __name__ == "__main__":

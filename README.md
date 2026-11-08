@@ -1,5 +1,13 @@
 # 座舱 DMS 与分心预警：从 ADDW / Euro NCAP 条款到可测试的报警逻辑
 
+[![tests](https://github.com/LUOaini1213/dms-distraction-warning-tests/actions/workflows/test.yml/badge.svg)](https://github.com/LUOaini1213/dms-distraction-warning-tests/actions/workflows/test.yml)
+
+**English summary.** A Python logic layer for a driver-monitoring system (DMS) that turns EU ADDW / DDAW, Euro NCAP 2026, ASEAN NCAP / IVASA and NHTSA clauses into 56 requirements and tests them with synthetic scenarios run under each protocol's procedure.
+Result: of 96 protocol cases for the proposed design, 86 pass and 10 are not applicable; none fail.
+In a synthetic 4 h false-alarm study the proposed design gives 0 false alarms per hour, while widening the glance-interruption tolerance from 0.3 s to 0.6 s gives 7.25 per hour.
+A traceability matrix links clauses → requirements → tests in both directions, and CI reruns everything and checks that the committed results and README numbers still match.
+Limits: inputs are already-classified gaze labels (no camera or perception model), all data is synthetic, and the project makes no ADDW / DDAW / Euro NCAP compliance claim.
+
 把欧盟 ADDW / DDAW、Euro NCAP 2026 驾驶员参与度规程、ASEAN NCAP 2026–2030 和 NHTSA 视觉-手动指南的条款整理成需求（共 56 条），再写成一个 Python 驾驶员监测（DMS）逻辑包 `dms/`，用合成场景按规程程序逐条测试。链路是：**条款 → 需求 → 场景测试 → 结果**，并做双向追溯。
 
 > **个人项目，使用 AI 工具辅助完成。** 所有场景数据都是合成数据（SYNTHETIC），所有阈值要么注明条款，要么标为设计假设（DA-xx）。本项目**不声称**任何车辆或功能符合 ADDW、DDAW 或 Euro NCAP。完整报告见 [report.md](report.md)，需求见 [需求规格.md](需求规格.md)。
@@ -12,13 +20,13 @@
 | ADDW Part 2 抽查，Area 3 注视点（9 个区域 × 2 档车速） | 声音报警都在 T_away 后 3.4 s；限值 4.0 s（≥50 km/h）/ 6.5 s（20–35 km/h） |
 | Euro NCAP 长时分心（9 个非驾驶位置） | 3.4 s，申报值 3.4 ± 0.2 s 内 |
 | Euro NCAP VATS / 手机使用（19 例） | 14.6 / 14.9 s，期望 14.5 / 14.8 ± 2.0 s 内 |
-| 微睡眠 / 睡眠 / 无响应 | 1.3 / 3.1 / 6.1 s（要求 1.3 ± 0.2、3.0 ± 0.2、≥6 s） |
+| 微睡眠 / 睡眠 / 无响应（闭眼、注视腿部两例） | 1.3 / 3.1 / 6.1 / 6.4 s（判定窗 1.3 ± 0.2、3 ± 0.2、6–6.3、6.2–6.6 s） |
 | 手遮挡摄像头、墨镜 | 5.0–5.1 s 提示“DMS 受限”（要求 ≤10 s） |
 | 边界用例 43 个 | 全部按设计（阈值下方不触发、上方触发） |
 | 误报研究：4 h 合成自然驾驶，32 个注入分心事件 | 误报 0 次/h；32 个事件全部按 Euro NCAP 时限检出；长注视中位时延 3.40 s（P95 3.69 s） |
 | NHTSA：触屏输入导航地址 vs 语音 | 触屏：总离路时间准则只有 2/24 人满足 → 应在行驶中锁止；语音：三条准则 24/23/24 人满足 |
-| 追溯 | 120 条条款 → 56 条需求 → 155 个场景/研究结果 + 40 个单元测试，413 行，两个方向都无孤立项 |
-| 单元测试 | `pytest` 40 项全部通过 |
+| 追溯 | 120 条条款 → 56 条需求 → 155 个场景/研究结果 + 41 个单元测试，414 行，两个方向都无孤立项 |
+| 单元测试 | `pytest` 41 项全部通过 |
 
 ## 调研中对设计影响最大的结论
 
@@ -92,26 +100,28 @@ ADDW_MIN 能过 ADDW，但在 Euro NCAP 低速长时分心（23、33 km/h）、�
 
 ## 复现
 
-在本目录下运行（Windows 与 Linux 相同；依赖 numpy、pandas、matplotlib、pytest）：
+需要 Python 3.11 或更新版本。在本目录下运行：
 
 ```bash
-python -I scripts/run_all.py                                       # 全部结果、图和追溯矩阵，约 1.5–2.5 分钟
-python -I -m pytest -q tests --junitxml=results/pytest_junit.xml   # 40 项
-python -I scripts/make_traceability.py                             # 把单元测试判定写进追溯矩阵
+python -m pip install -r requirements.txt          # 版本范围；生成提交结果时用的精确版本见 requirements-lock.txt（Python 3.12+）
+python -I scripts/run_all.py                       # 全部结果、图，再跑 41 项 pytest，最后生成追溯矩阵，约 1–3 分钟
+python -I scripts/check_readme_numbers.py          # 核对本 README 里的数字与 results/、traceability.csv 一致
 ```
 
-代码只用相对路径（`pathlib`），随机数都固定种子，重复运行结果一致。
+`run_all.py` 会先跑完全部研究，再用 `--junitxml=results/pytest_junit.xml` 跑单元测试，最后建追溯矩阵，所以一步就得到最终的 `traceability.csv`。如果加 `--no-tests` 只跑研究，或者单独运行 `scripts/make_traceability.py` 而没有 JUnit 文件，矩阵里的单元测试行会写成“未运行”（脚本会提示）。
+
+代码只用相对路径（`pathlib`），随机数都固定种子，重复运行结果一致。GitHub Actions 在 Ubuntu 和 Windows、Python 3.11 和 3.12 上重跑上面的命令，再用 `git diff` 确认除 PNG 图以外的全部 CSV / JSON / Markdown 结果与仓库里的逐字节一致（PNG 的字节随 matplotlib 版本变化）。
 
 ## 文件
 
 ```
 regulation_requirements.csv  120 条条款：来源、条款号、转述、参数、是否核实、官方链接
 需求规格.md                  56 条需求、状态机、参数表、设计假设、未核实项
-traceability.csv             条款 → 需求 → 测试 → 结果（413 行，双向完整）
+traceability.csv             条款 → 需求 → 测试 → 结果（414 行，双向完整）
 dms/                         regulations / config / geometry / detectors / warning / system /
                              scenarios / suites / false_alarm / nhtsa / ddaw / requirements / trace / plots
-scripts/                     run_all.py、make_traceability.py
-tests/                       40 项 pytest
+scripts/                     run_all.py、make_traceability.py、check_readme_numbers.py
+tests/                       41 项 pytest
 results/                     regulation_tests.csv、boundary_tests.csv、false_alarm_*.csv、nhtsa_*.csv、
                              ddaw_synthetic_*、parameters.csv、tables.md、summary.json、traceability_summary.md、
                              fig1_timeline.png、fig2_false_alarm_tradeoff.png、fig3_nhtsa_hmi.png
@@ -124,7 +134,7 @@ report.md                    完整技术报告
 - **全部是合成数据**：扫视模型、感知噪声、NHTSA 任务模型、DDAW 演示里的 KSS 模型都是设计假设，没有用自然驾驶数据或真人试验标定。误报率、时延的绝对值不能外推；能看的是参数之间的相对取舍。
 - **疲劳阈值未标定**：PERCLOS 0.12 / 0.20 只是假设；DDAW 型式认证需要按 Part 2 用 ≥10 名真人做验证，还要以车辆信号分析为主。
 - **规程判定口径**：Euro NCAP SD-202 的容差示意图未能读取，长时分心按 ±0.2 s 判定；DDAW 的标准差公式按译文重建。
-- **不在范围**：HMI 声学参数、EF 紧急停车、FSS 对 AEB 的真实效果（需与 P5 的 AEB 闭环联调）、跨上电的故障存储、ECU 自检与诊断。
+- **不在范围**：HMI 声学参数、EF 紧急停车、FSS 对 AEB 的真实效果（需要闭环 AEB 模型联调）、跨上电的故障存储、ECU 自检与诊断。
 
 ## 未核实
 

@@ -1,0 +1,38 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.11", "3.12"]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install
+        run: python -m pip install -r requirements.txt
+      - name: Run all studies, unit tests and the traceability gate
+        run: python -I scripts/run_all.py
+      - name: Traceability gate on its own (exit 1 on any orphan)
+        run: python -I scripts/make_traceability.py
+      - name: README numbers match the result files
+        run: python -I scripts/check_readme_numbers.py
+      - name: Regenerated results are byte-identical to the committed ones (PNG bytes depend on matplotlib)
+        run: |
+          git status --short
+          git diff --exit-code -- . ':(exclude)*.png'
